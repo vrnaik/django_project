@@ -25,7 +25,8 @@ SECRET_KEY = 'bajg752t)mqk@lx$mh442cukfmf^usp1r9)uuqcv8w!lv=&ati'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.viresor.com']
+# ALLOWED_HOSTS = ['www.viresor.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition

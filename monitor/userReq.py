@@ -58,7 +58,7 @@ def sendReq(client):
     MQTT_MSG=json.dumps({"fan":{"id":"100","status":data['status'],"action":data['action'],"duration":data['duration'],"startTime":data['startTime'],"stopTime":data['stopTime']},"pump":{"id":"100","status":data['status1'],"action":data['action1'],"duration":data['duration1'],"startTime":data['startTime1'],"stopTime":data['stopTime1']},"sprinkler":{"id":"100","status":data['status2'],"action":data['action2'],"duration":data['duration2'],"startTime":data['startTime2'],"stopTime":data['stopTime2']},"light":{"id":"100","status":data['status3'],"action":data['action3'],"duration":data['duration3'],"startTime":data['startTime3'],"stopTime":data['stopTime3']}});
     # MQTT_MSG=json.dumps({"fan":{"id":"100","status":data['status'],"action":data['action'],"duration":data['duration'],"startTime":data['startTime'],"stopTime":data['stopTime']}})
 
-    client.connect("www.viresor.com", 1883, 60)
+    client.connect("localhost", 1883, 60)
     client.on_connect = on_connect
     client.on_message = on_message
     client.publish("topic/userReq", MQTT_MSG)
@@ -75,7 +75,7 @@ def listen(client):
     sys.stdout.write('server2: waiting for reply from server1 ')
 
     while True:
-        client.connect("www.viresor.com", 1883, 60)
+        client.connect("localhost", 1883, 60)
         client.on_connect = on_connect
         client.on_message = on_message
 
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     #fan-0,pump-1, sprinkler-3, light-3
       # MQTT_MSG=json.dumps({"fan":{"id":"100","status":data['status'],"action":data['action'],"duration":data['duration'],"startTime":data['startTime'],"stopTime":data['stopTime']},"pump":{"id":"100","status":data['status1'],"action":data['action1'],"duration":data['duration1'],"startTime":data['startTime1'],"stopTime":data['stopTime1']}});
     # print(MQTT_MSG)
-    client = mqtt.Client("www.viresor.com", 1883, 60)
+    client = mqtt.Client()
     # while True:
     sendReq(client)
     listen(client)

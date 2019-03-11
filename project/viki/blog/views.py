@@ -100,7 +100,7 @@ def about(request):
 def startlogging( data ):
 
 
-    process = subprocess.Popen(["python", "/home/vikas/Desktop/Desk/userReq.py"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    process = subprocess.Popen(["python", "/home/vikas/git/django_project/monitor/userReq.py"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     stdout = process.communicate(str.encode(data))[0]
     time.sleep(2)
     process.kill()

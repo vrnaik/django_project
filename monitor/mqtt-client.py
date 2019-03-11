@@ -81,9 +81,9 @@ if __name__ == "__main__":
 
     watt = {"fan": powerConsumption.FAN, "light": powerConsumption.LIGHT, "pump": powerConsumption.PUMP, "sprinkler": powerConsumption.SPRINKLER}  # in python we can write json data in dictionary
     # print(type(watt))
-    client = mqtt.Client('www.viresor.com:1883')
+    client = mqtt.Client("localhost", 1883, 60)
     while True:
-        client.connect("www.viresor.com", 1883, 60)
+        client.connect("localhost", 1883, 60)
         client.on_connect = on_connect
         client.on_message = on_message
         print('server1 started..')
@@ -91,11 +91,4 @@ if __name__ == "__main__":
 
 
 
-'''
-import subprocess
-import os
-p = subprocess.Popen(['/bin/sh', os.path.expanduser('~/tmp/sleeper.sh')])
-# look ma, no pipes!
-print p.pid
-# prints 29893
-'''
+
