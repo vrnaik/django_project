@@ -1,0 +1,29 @@
+﻿Step1. Created rsa key on ubuntu laptop
+step2. Copied the .pub from ubuntu laptop to raspberrypi (https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-in-ubuntu)
+
+step3. Connected laptop and raspberry pi to jiofi router
+
+step : connected putty by adding "raspberrypi.local" in ip address field, port was 22
+	in remmina app added ip address, user name and password 
+
+step4. Used command raspi-config, then option 5 then vnc
+
+step5. Apt-get install tightvncserver
+
+step6. Command “vncserver :1” (to kill: “vncserver -kill :1”)
+
+step7. Entered the new password for vncserver  and vnc got started
+
+step8. Installed vnc viewer 
+
+step9. In vnc viewer app added ipaddress “ipaddressofraspberrypi:5901” and password which was created while starting the vncserver
+
+
+
+username : pi
+password : raspberrypi
+
+username : root,dataplicity
+password : pi,pi
+
+vncserver password vikasnaik
