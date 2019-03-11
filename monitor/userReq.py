@@ -84,9 +84,6 @@ def listen(client):
 
 
 if __name__ == "__main__":
-
-
-
     #fan-0,pump-1, sprinkler-3, light-3
       # MQTT_MSG=json.dumps({"fan":{"id":"100","status":data['status'],"action":data['action'],"duration":data['duration'],"startTime":data['startTime'],"stopTime":data['stopTime']},"pump":{"id":"100","status":data['status1'],"action":data['action1'],"duration":data['duration1'],"startTime":data['startTime1'],"stopTime":data['stopTime1']}});
     # print(MQTT_MSG)
