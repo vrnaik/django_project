@@ -1,0 +1,3 @@
+use following two code in html file to check why form is not valid
+        --  {{ form.errors }}
+        --  {{ form.non_field_errors }}

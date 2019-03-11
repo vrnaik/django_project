@@ -1,0 +1,75 @@
+------------------------ideal input---------------------------
+MQTT_MSG=json.dumps({"fan":{"id":"100","status":data['status'],"action":data['action'],"duration":data['duration'],"startTime":data['startTime'],"stopTime":data['stopTime']},"pump":{"id":"100","status":data['status1'],"action":data['action1'],"duration":data['duration1'],"startTime":data['startTime1'],"stopTime":data['stopTime1']}});
+
+MQTT_MSG=json.dumps({"fan":{"id":"100","status":"idle","action":"start","duration":"60","startTime":"2:30","stopTime":"3:30"},"pump":{"id":"100","status":"idle","action":"start","duration":"60","startTime":"2:30","stopTime":"3:30"},"sprinkler":{"id":"100","status":"idle","action":"start","duration":"60","startTime":"2:30","stopTime":"3:30"},"light":{"id":"100","status":"idle","action":"start","duration":"60","startTime":"2:30","stopTime":"3:30"}});
+
+first we provide following data
+
+{"fan":{
+"id":"100",
+"status":"idle",
+"action":"start",
+"duration":"60",
+"startTime":"2:30",
+"stopTime":"3:30"},
+
+"pump":{
+"id":"100",
+"status":"idle",
+"action":"start",
+"duration":"60",
+"startTime":"2:30",
+"stopTime":"3:30"},
+
+"sprinkler":{
+"id":"100",
+"status":"idle",
+"action":"start",
+"duration":"60",
+"startTime":"2:30",
+"stopTime":"3:30"},
+
+"light":{
+"id":"100",
+"status":"idle",
+"action":"start",
+"duration":"60",
+"startTime":"2:30",
+"stopTime":"3:30"}});
+
+later we provide this data
+
+{"fan": {
+"id": "100",
+"status": "idle",
+"action": "start",
+"duration": "0",          -------------> duration is zero
+"startTime": "2:30",
+"stopTime": "3:30"},
+
+"pump": {"id": "100",
+"status": "idle", "action":
+"start", "duration": "60",
+"startTime": "2:30",
+"stopTime": "3:30"},
+
+"sprinkler": {
+"id": "100",
+"status": "idle",
+"action": "start",
+"duration": "60",
+"startTime": "2:30",
+"stopTime": "3:30"},
+
+"light": {"id": "100",
+"status": "idle",
+"action": "start",
+"duration": "0",          -------------> duration is zero
+"startTime": "2:30",
+"stopTime": "3:30"}}))
+
+
+i am using two files userReq.py(server2) and mqtt-client.py(server1)
+
+server1 first started then server2
+

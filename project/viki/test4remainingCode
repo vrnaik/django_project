@@ -1,0 +1,75 @@
+     <!--<h5> Pump </h5>-->
+        <!--<div class="form-row">-->
+
+          <!--<div class="form-group col-md-2 mb-0">-->
+            <!--{{ form.status1|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 b-0">-->
+            <!--{{ form.action1|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 mb-0">-->
+            <!--{{ form.duration1|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 b-0">-->
+            <!--{{ form.startTime1|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 b-0">-->
+            <!--{{ form.stopTime1|as_crispy_field }}-->
+          <!--</div>-->
+        <!--</div>-->
+
+        <!--<h5> Light </h5>-->
+        <!--<div class="form-row">-->
+
+          <!--<div class="form-group col-md-2 mb-0">-->
+            <!--{{ form.status2|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 b-0">-->
+            <!--{{ form.action2|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 mb-0">-->
+            <!--{{ form.duration2|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 b-0">-->
+            <!--{{ form.startTime2|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 b-0">-->
+            <!--{{ form.stopTime2|as_crispy_field }}-->
+          <!--</div>-->
+
+        <!--</div>-->
+
+             <!--<h5> Sprinkler </h5>-->
+        <!--<div class="form-row">-->
+
+          <!--<div class="form-group col-md-2 mb-0">-->
+            <!--{{ form.status3|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 b-0">-->
+            <!--{{ form.action3|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 mb-0">-->
+            <!--{{ form.duration3|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 b-0">-->
+            <!--{{ form.startTime3|as_crispy_field }}-->
+          <!--</div>-->
+
+          <!--<div class="form-group col-md-2 b-0">-->
+            <!--{{ form.stopTime3|as_crispy_field }}-->
+          <!--</div>-->
+
+        <!--</div>-->
+
+        <!--{{ form.check_me_out|as_crispy_field }}-->

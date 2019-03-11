@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns:margin-right="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css'%}">
+    <!--for signup and login-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!--for icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--nav bar align-->
+
+
+    {% if title %}
+    <title> Dashboard -- {{ title }}  </title>
+    {% else %}
+    <title>  Dashboard </title>
+    {% endif%}
+
+</head>
+<body class="bg-steel">
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-default navbar-fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4 text-light" href="{% url 'dash-home'%}">DASHBOARD</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <!--<a class="nav-item nav-link" href="{% url 'dash-home'%}">Home</a>-->
+              <!--<a class="nav-item nav-link" href="{% url 'dash-about'%}">About</a>-->
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav navbar-right">
+              <a class="nav-item nav-link" href="login">Login</a>
+              <a class="nav-item nav-link" href="register">Register</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+        <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+
+          <!--&lt;!&ndash;<a class="nav-link navbar-brand disabled " href="{% url 'dash-home'%}">DASHBOARD</a>&ndash;&gt;-->
+          <!--<div class="col-md-2 text-center">-->
+              <!--<ul class="nav navbar-nav navbar-center text-center">-->
+                  <!--<li class="nav-item text-center">-->
+                    <!--<a class="nav-link navbar-brand text-dark font-weight-bolder text-*-center " href="{% url 'dash-home'%}">DASHBOARD</a>-->
+                  <!--</li>-->
+              <!--</ul>-->
+          <!--</div>-->
+          <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+            <!--<span class="navbar-toggler-icon"></span>-->
+          <!--</button>-->
+          <!--<div class="collapse navbar-collapse justify-content-end" id="navbarNav">-->
+
+
+
+            <!--&lt;!&ndash;<ul class="nav navbar-nav">&ndash;&gt;-->
+              <!--&lt;!&ndash;<li class="nav-item active">&ndash;&gt;-->
+                <!--&lt;!&ndash;<a class="nav-link" href="{% url 'dash-home'%}">Home <span class="sr-only">(current)</span></a>&ndash;&gt;-->
+              <!--&lt;!&ndash;</li>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+
+            <!--<ul class="nav navbar-nav navbar-right">-->
+              <!--<li class="nav-item ">-->
+                <!--<a class="nav-link" href="{% url 'dash-login'%}">Login </a>-->
+              <!--</li>-->
+              <!--<li class="nav-item">-->
+                <!--<a class="nav-link" href="register">Sign Up</a>-->
+              <!--</li>-->
+
+            <!--</ul>-->
+          <!--</div>-->
+
+        <!--</nav>-->
+    </header>
+
+
+    <main  role="main" class="container" style="margin-top:90px;">
+      <div class="row " style=" ">
+        <div class="col-md-8">
+            <div class="panel" style="height: 96.9%; background:#D0E7F3;  " >
+                <!--background:#D4E8E9;-->
+
+                <div style=" height:93.5%; background:#D0E7F3;padding: 30px 30px 30px 30px; margin-left:50px; margin-top:5px;" >
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        {% include "blog/sidebar.html" %}
+
+      </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

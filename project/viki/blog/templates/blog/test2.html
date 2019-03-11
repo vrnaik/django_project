@@ -1,0 +1,131 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <form method="post">
+      {% csrf_token %}
+      <div class="form-row">
+          <div>
+
+              <!--<H1> Fan </H1>-->
+              <div class="form-group ">
+                {{ form.email|as_crispy_field  }}
+              </div>
+
+              <div class="form-group ">
+                {{ form.password|as_crispy_field }}
+              </div>
+
+              <!--<div class="form-group ">-->
+                <!--{{ form.duration|as_crispy_field:"bootstrap"  }}-->
+              <!--</div>-->
+
+              <!--<div class="form-group ">-->
+                <!--{{ form.startTime|as_crispy_field:"bootstrap"  }}-->
+              <!--</div>-->
+
+              <!--<div class="form-group ">-->
+                <!--{{ form.stopTime|as_crispy_field:"bootstrap"  }}-->
+              <!--</div>-->
+
+          </div>
+
+      </div>
+      {{ form.check_me_out|as_crispy_field }}
+      <button type="submit" class="btn btn-primary">Sign in</button>
+
+  </form>
+          <!--<div>-->
+
+              <!--<H1> light </H1>-->
+              <!--<div class="form-group">-->
+                <!--{{ form.status|as_crispy_field }}-->
+              <!--</div>-->
+
+              <!--<div class="form-group ">-->
+                <!--{{ form.action|as_crispy_field }}-->
+              <!--</div>-->
+
+              <!--<div class="form-group">-->
+                <!--{{ form.duration|as_crispy_field }}-->
+              <!--</div>-->
+
+              <!--<div class="form-group ">-->
+                <!--{{ form.startTime|as_crispy_field }}-->
+              <!--</div>-->
+
+              <!--<div class="form-group ">-->
+                <!--{{ form.stopTime|as_crispy_field }}-->
+              <!--</div>-->
+
+          <!--</div>-->
+
+          <!--<div>-->
+
+              <!--<H1> pump </H1>-->
+              <!--<div class="form-group ">-->
+                <!--{{ form.status|as_crispy_field }}-->
+              <!--</div>-->
+
+              <!--<div class="form-group ">-->
+                <!--{{ form.action|as_crispy_field }}-->
+              <!--</div>-->
+
+              <!--<div class="form-group">-->
+                <!--{{ form.duration|as_crispy_field }}-->
+              <!--</div>-->
+
+              <!--<div class="form-group ">-->
+                <!--{{ form.startTime|as_crispy_field }}-->
+              <!--</div>-->
+
+              <!--<div class="form-group ">-->
+                <!--{{ form.stopTime|as_crispy_field }}-->
+              <!--</div>-->
+
+          <!--</div>-->
+
+
+
+
+
+
+
+
+    <!--<div class="form-row">-->
+        <!---->
+      <!--<div class="form-group col-md-6 mb-0">-->
+        <!--{{ form.email|as_crispy_field }}-->
+      <!--</div>-->
+        <!---->
+      <!--<div class="form-group col-md-6 mb-0">-->
+        <!--{{ form.password|as_crispy_field }}-->
+      <!--</div>-->
+        <!---->
+    <!--</div>-->
+      <!---->
+    <!--{{ form.address_1|as_crispy_field }}-->
+    <!--{{ form.address_2|as_crispy_field }}-->
+      <!---->
+      <!---->
+    <!--<div class="form-row">-->
+        <!---->
+      <!--<div class="form-group col-md-6 mb-0">-->
+        <!--{{ form.city|as_crispy_field }}-->
+      <!--</div>-->
+        <!---->
+      <!--<div class="form-group col-md-4 mb-0">-->
+        <!--{{ form.state|as_crispy_field }}-->
+      <!--</div>-->
+        <!---->
+      <!--<div class="form-group col-md-2 mb-0">-->
+        <!--{{ form.zip_code|as_crispy_field }}-->
+      <!--</div>-->
+        <!---->
+    <!--</div>-->
+
+
+    <!--{{ form.check_me_out|as_crispy_field }}-->
+
+
+
+{% endblock content %}
