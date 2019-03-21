@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: curses-ui
+Version: 0.0.2
+Summary: Curses UI with native window management and keyboard support
+Home-page: https://github.com/jordonsc/python-curses-ui
+Author: Jordon Scott
+Author-email: jordon@novatek.com.au
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
