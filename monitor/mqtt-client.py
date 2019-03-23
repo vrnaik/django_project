@@ -37,6 +37,12 @@ def processData(payload):
 
 def on_connect(client, userdata, flags, rc):
     # print("Connected with result code "+str(rc))
+    if rc==0:
+#         print("connected OK Returned code=",rc)
+        print('server1 started..')
+    else:
+        print("Bad connection Returned code=",rc)
+    
     client.subscribe("topic/test")
     client.subscribe("topic/userReq")
     client.subscribe("topic/generated")
@@ -44,7 +50,7 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("topic/statusR")
 
 
-def on_message(client, userdata, msg):
+def on_message(client, userdata, msg): # after this message function the control signal goes to client.on_message command and starts executing next commands
     # if msg.payload.decode() == "Hello world!":
     if msg.topic == "topic/test":
         print(msg.topic)
@@ -81,13 +87,16 @@ if __name__ == "__main__":
 
     watt = {"fan": powerConsumption.FAN, "light": powerConsumption.LIGHT, "pump": powerConsumption.PUMP, "sprinkler": powerConsumption.SPRINKLER}  # in python we can write json data in dictionary
     # print(type(watt))
-    client = mqtt.Client("localhost", 1883, 60)
-    while True:
-        client.connect("localhost", 1883, 60)
-        client.on_connect = on_connect
-        client.on_message = on_message
-        print('server1 started..')
+    broker="localhost"
+    port=1883
+    dura=8000  # in seconds
+    client = mqtt.Client()    
+    client.on_connect = on_connect
+    client.on_message = on_message
+    while True:  
+        client.connect(broker, port, dura)              
         client.loop_forever()
+
 
 
 

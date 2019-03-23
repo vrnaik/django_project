@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 import paho.mqtt.client as mqtt
 import json
+import sys, os
 # This is the Publisher
 #MQTT_MSG=json.dumps({"fan": "1","pump":  "2","light": "1","sprinkler":  "3"});
 #below MQTT_MSG is what i was using
 # MQTT_MSG=json.dumps({"fan":{"id":"100","status":"idle","action":"start","duration":"60","startTime":"2:30","stopTime":"3:30"},"pump":{"id":"100","status":"idle","action":"start","duration":"60","startTime":"2:30","stopTime":"3:30"},"sprinkler":{"id":"100","status":"idle","action":"start","duration":"60","startTime":"2:30","stopTime":"3:30"},"light":{"id":"100","status":"idle","action":"start","duration":"60","startTime":"2:30","stopTime":"3:30"}});
 
-import sys
+host = 'localhost'
+port = 1883
+duration = 8000
+
 dat = sys.stdin.read()
+
 # data = bytes.decode(dat)
 
 # sys.stdout.write('Received: %s'%dat)
@@ -45,10 +50,13 @@ def on_message(client, userdata, msg):
         # print(msg.payload)
         client.disconnect()
 
-# client = mqtt.Client()
-# client.connect("localhost",1883,60)
-# client.publish("topic/userReq", MQTT_MSG);
-# client.disconnect();
+
+def connection(client):
+    client.connect(host, port, duration)
+    client.on_connect = on_connect
+    client.on_message = on_message
+    return client
+
 def sendReq(client):
 
     # with open('/home/vikas/project/viki/file.json') as f:
@@ -57,25 +65,23 @@ def sendReq(client):
     data = binary_to_dict(dat)
     MQTT_MSG=json.dumps({"fan":{"id":"100","status":data['status'],"action":data['action'],"duration":data['duration'],"startTime":data['startTime'],"stopTime":data['stopTime']},"pump":{"id":"100","status":data['status1'],"action":data['action1'],"duration":data['duration1'],"startTime":data['startTime1'],"stopTime":data['stopTime1']},"sprinkler":{"id":"100","status":data['status2'],"action":data['action2'],"duration":data['duration2'],"startTime":data['startTime2'],"stopTime":data['stopTime2']},"light":{"id":"100","status":data['status3'],"action":data['action3'],"duration":data['duration3'],"startTime":data['startTime3'],"stopTime":data['stopTime3']}});
     # MQTT_MSG=json.dumps({"fan":{"id":"100","status":data['status'],"action":data['action'],"duration":data['duration'],"startTime":data['startTime'],"stopTime":data['stopTime']}})
+    
+    client = connection(client)
 
-    client.connect("localhost", 1883, 60)
-    client.on_connect = on_connect
-    client.on_message = on_message
     client.publish("topic/userReq", MQTT_MSG)
     client.disconnect()
     # print('--------------------------------')
     sys.stdout.write('server2: user request is sent to server1 ')
 
 
-
-
 def listen(client):
 
     # print('--------------------------------')
     sys.stdout.write('server2: waiting for reply from server1 ')
-
+#     client = connection(client)
+  
     while True:
-        client.connect("localhost", 1883, 60)
+        client.connect("localhost", 1883)
         client.on_connect = on_connect
         client.on_message = on_message
 

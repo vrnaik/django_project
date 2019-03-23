@@ -146,6 +146,7 @@ def start(request):
             stdout = startlogging(bin)
             str = stdout.decode("utf-8")
             typ = type(str)
+            print(str)
             # st = stdout.str()
             # s = stdout.split("\n")
             d = 11
@@ -174,14 +175,13 @@ def start(request):
         # print(status)
         # with open('file.json', 'w') as f:
         #         json.dump(form.cleaned_data, f)
-
     else:
         form = HomeForm()
         context = {'form': form}
     # return HttpResponseRedirect('/')
-
-
     return render(request, 'blog/test4.html', context)
+
+
 
 class JSONEncoder(json.JSONEncoder):
     def default(self, obj):
