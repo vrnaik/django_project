@@ -1,0 +1,364 @@
+Starting django_app as vikas
+[2019-05-01 15:50:46 +0530] [13433] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/home/vikas/git/django_project/project/env/run/gunicorn.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/vikas/git/django_project/project/viki
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: django_app
+  default_proc_name: viki.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f550a2ac840>
+  on_reload: <function OnReload.on_reload at 0x7f550a2ac950>
+  when_ready: <function WhenReady.when_ready at 0x7f550a2aca60>
+  pre_fork: <function Prefork.pre_fork at 0x7f550a2acb70>
+  post_fork: <function Postfork.post_fork at 0x7f550a2acc80>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f550a2acd90>
+  worker_int: <function WorkerInt.worker_int at 0x7f550a2acea0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f5509dbc048>
+  pre_exec: <function PreExec.pre_exec at 0x7f5509dbc158>
+  pre_request: <function PreRequest.pre_request at 0x7f5509dbc268>
+  post_request: <function PostRequest.post_request at 0x7f5509dbc2f0>
+  child_exit: <function ChildExit.child_exit at 0x7f5509dbc400>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f5509dbc510>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f5509dbc620>
+  on_exit: <function OnExit.on_exit at 0x7f5509dbc730>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-05-01 15:50:46 +0530] [13433] [INFO] Starting gunicorn 19.9.0
+[2019-05-01 15:50:46 +0530] [13433] [DEBUG] Arbiter booted
+[2019-05-01 15:50:46 +0530] [13433] [INFO] Listening at: unix:/home/vikas/git/django_project/project/env/run/gunicorn.sock (13433)
+[2019-05-01 15:50:46 +0530] [13433] [INFO] Using worker: sync
+[2019-05-01 15:50:46 +0530] [13438] [INFO] Booting worker with pid: 13438
+[2019-05-01 15:50:46 +0530] [13439] [INFO] Booting worker with pid: 13439
+[2019-05-01 15:50:47 +0530] [13440] [INFO] Booting worker with pid: 13440
+[2019-05-01 15:50:47 +0530] [13433] [DEBUG] 3 workers
+[2019-05-01 15:51:50 +0530] [13433] [INFO] Handling signal: term
+[2019-05-01 10:21:50 +0000] [13438] [INFO] Worker exiting (pid: 13438)
+[2019-05-01 10:21:50 +0000] [13440] [INFO] Worker exiting (pid: 13440)
+[2019-05-01 10:21:50 +0000] [13439] [INFO] Worker exiting (pid: 13439)
+[2019-05-01 15:51:50 +0530] [13433] [INFO] Shutting down: Master
+Starting django_app as vikas
+[2019-05-01 15:51:52 +0530] [13561] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/home/vikas/git/django_project/project/env/run/gunicorn.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/vikas/git/django_project/project/viki
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: django_app
+  default_proc_name: viki.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f02e6c2f840>
+  on_reload: <function OnReload.on_reload at 0x7f02e6c2f950>
+  when_ready: <function WhenReady.when_ready at 0x7f02e6c2fa60>
+  pre_fork: <function Prefork.pre_fork at 0x7f02e6c2fb70>
+  post_fork: <function Postfork.post_fork at 0x7f02e6c2fc80>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f02e6c2fd90>
+  worker_int: <function WorkerInt.worker_int at 0x7f02e6c2fea0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f02e673f048>
+  pre_exec: <function PreExec.pre_exec at 0x7f02e673f158>
+  pre_request: <function PreRequest.pre_request at 0x7f02e673f268>
+  post_request: <function PostRequest.post_request at 0x7f02e673f2f0>
+  child_exit: <function ChildExit.child_exit at 0x7f02e673f400>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f02e673f510>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f02e673f620>
+  on_exit: <function OnExit.on_exit at 0x7f02e673f730>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-05-01 15:51:52 +0530] [13561] [INFO] Starting gunicorn 19.9.0
+[2019-05-01 15:51:52 +0530] [13561] [DEBUG] Arbiter booted
+[2019-05-01 15:51:52 +0530] [13561] [INFO] Listening at: unix:/home/vikas/git/django_project/project/env/run/gunicorn.sock (13561)
+[2019-05-01 15:51:52 +0530] [13561] [INFO] Using worker: sync
+[2019-05-01 15:51:52 +0530] [13566] [INFO] Booting worker with pid: 13566
+[2019-05-01 15:51:52 +0530] [13568] [INFO] Booting worker with pid: 13568
+[2019-05-01 15:51:52 +0530] [13570] [INFO] Booting worker with pid: 13570
+[2019-05-01 15:51:52 +0530] [13561] [DEBUG] 3 workers
+[2019-05-01 16:00:25 +0530] [13561] [INFO] Handling signal: term
+Traceback (most recent call last):
+  File "/home/vikas/project/env/lib/python3.6/site-packages/gunicorn/arbiter.py", line 225, in run
+    handler()
+  File "/home/vikas/project/env/lib/python3.6/site-packages/gunicorn/arbiter.py", line 260, in handle_term
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vikas/project/env/bin/gunicorn", line 11, in <module>
+    sys.exit(run())
+  File "/home/vikas/project/env/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 61, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/vikas/project/env/lib/python3.6/site-packages/gunicorn/app/base.py", line 223, in run
+    super(Application, self).run()
+  File "/home/vikas/project/env/lib/python3.6/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/vikas/project/env/lib/python3.6/site-packages/gunicorn/arbiter.py", line 228, in run
+    self.halt()
+  File "/home/vikas/project/env/lib/python3.6/site-packages/gunicorn/arbiter.py", line 345, in halt
+    self.stop()
+  File "/home/vikas/project/env/lib/python3.6/site-packages/gunicorn/arbiter.py", line 382, in stop
+    sock.close_sockets(self.LISTENERS, unlink)
+  File "/home/vikas/project/env/lib/python3.6/site-packages/gunicorn/sock.py", line 209, in close_sockets
+    os.unlink(sock_name)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/vikas/git/django_project/project/env/run/gunicorn.sock'
+Starting django_app as vikas
+[2019-05-01 16:00:27 +0530] [13861] [DEBUG] Current configuration:
+  config: None
+  bind: ['unix:/home/vikas/git/django_project/project/env/run/gunicorn.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/vikas/git/django_project/project/viki
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: django_app
+  default_proc_name: viki.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fef62c48840>
+  on_reload: <function OnReload.on_reload at 0x7fef62c48950>
+  when_ready: <function WhenReady.when_ready at 0x7fef62c48a60>
+  pre_fork: <function Prefork.pre_fork at 0x7fef62c48b70>
+  post_fork: <function Postfork.post_fork at 0x7fef62c48c80>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fef62c48d90>
+  worker_int: <function WorkerInt.worker_int at 0x7fef62c48ea0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fef62758048>
+  pre_exec: <function PreExec.pre_exec at 0x7fef62758158>
+  pre_request: <function PreRequest.pre_request at 0x7fef62758268>
+  post_request: <function PostRequest.post_request at 0x7fef627582f0>
+  child_exit: <function ChildExit.child_exit at 0x7fef62758400>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fef62758510>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fef62758620>
+  on_exit: <function OnExit.on_exit at 0x7fef62758730>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-05-01 16:00:27 +0530] [13861] [INFO] Starting gunicorn 19.9.0
+[2019-05-01 16:00:27 +0530] [13861] [DEBUG] Arbiter booted
+[2019-05-01 16:00:27 +0530] [13861] [INFO] Listening at: unix:/home/vikas/git/django_project/project/env/run/gunicorn.sock (13861)
+[2019-05-01 16:00:27 +0530] [13861] [INFO] Using worker: sync
+[2019-05-01 16:00:27 +0530] [13866] [INFO] Booting worker with pid: 13866
+[2019-05-01 16:00:27 +0530] [13867] [INFO] Booting worker with pid: 13867
+[2019-05-01 16:00:27 +0530] [13868] [INFO] Booting worker with pid: 13868
+[2019-05-01 16:00:27 +0530] [13861] [DEBUG] 3 workers
+[2019-05-01 10:52:00 +0000] [13868] [DEBUG] GET /home.php
+Not Found: /home.php
+[2019-05-01 10:52:15 +0000] [13866] [DEBUG] GET /home.php
+Not Found: /home.php
+[2019-05-01 10:52:16 +0000] [13868] [DEBUG] GET /home.php
+Not Found: /home.php
+[2019-05-01 10:52:17 +0000] [13867] [DEBUG] GET /home.php
+Not Found: /home.php
+[2019-05-01 10:52:19 +0000] [13866] [DEBUG] GET /home.php
+Not Found: /home.php
+[2019-05-01 10:52:23 +0000] [13868] [DEBUG] GET /home.php
+Not Found: /home.php
+[2019-05-01 10:52:24 +0000] [13868] [DEBUG] GET /home.php
+Not Found: /home.php
+[2019-05-01 10:52:32 +0000] [13868] [DEBUG] GET /home.php
+Not Found: /home.php
+[2019-05-01 10:52:32 +0000] [13868] [DEBUG] GET /home.php
+Not Found: /home.php
+[2019-05-01 10:52:33 +0000] [13867] [DEBUG] GET /home.php
+Not Found: /home.php
+[2019-05-01 10:52:33 +0000] [13866] [DEBUG] GET /home.php
+Not Found: /home.php
+[2019-05-01 10:53:02 +0000] [13866] [DEBUG] GET /login
+[2019-05-01 10:53:02 +0000] [13866] [DEBUG] GET /login/
+[2019-05-01 10:54:58 +0000] [13868] [DEBUG] GET /l
+Not Found: /l
+[2019-05-01 10:55:06 +0000] [13868] [DEBUG] GET /admin
+[2019-05-01 10:55:06 +0000] [13868] [DEBUG] GET /admin/
+[2019-05-01 10:55:06 +0000] [13868] [DEBUG] GET /admin/login/
+[2019-05-01 10:55:09 +0000] [13866] [DEBUG] POST /admin/login/
+[2019-05-01 10:55:19 +0000] [13867] [DEBUG] GET /8000
+Not Found: /8000
+[2019-05-01 10:55:31 +0000] [13868] [DEBUG] GET /detail
+[2019-05-01 10:55:31 +0000] [13868] [DEBUG] GET /detail/
+Internal Server Error: /detail/
+Traceback (most recent call last):
+  File "/home/vikas/project/env/lib/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/vikas/project/env/lib/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/vikas/project/env/lib/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vikas/git/django_project/project/viki/blog/views.py", line 64, in Snippet_detail
+    form = SnippetForm()
+NameError: name 'SnippetForm' is not defined
+[2019-05-01 10:55:41 +0000] [13868] [DEBUG] GET /
+[2019-05-01 10:55:47 +0000] [13867] [DEBUG] GET /
+[2019-05-01 10:55:48 +0000] [13868] [DEBUG] GET /
+[2019-05-01 10:55:49 +0000] [13868] [DEBUG] GET /
+[2019-05-01 10:55:56 +0000] [13868] [DEBUG] GET /
+[2019-05-01 11:00:10 +0000] [13867] [DEBUG] POST /
+[2019-05-01 11:01:27 +0000] [13868] [DEBUG] POST /
+[2019-05-01 11:03:47 +0000] [13868] [DEBUG] POST /
+[2019-05-01 11:03:57 +0000] [13866] [DEBUG] POST /
+[2019-05-01 11:21:35 +0000] [13868] [DEBUG] POST /
+[2019-05-01 11:24:46 +0000] [13868] [DEBUG] POST /
+[2019-05-01 11:29:05 +0000] [13866] [DEBUG] GET /
+[2019-05-01 11:29:14 +0000] [13866] [DEBUG] GET /
